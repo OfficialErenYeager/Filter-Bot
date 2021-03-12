@@ -28,14 +28,14 @@ from bot.modules.connection import connect_button
 
 PM_START_TEXT = """
 *Hello* *{}*
-*My name is* *{}*\n\n`You Can Add any kind of Filters to This Bot!`
+*My name is* *{Unlimited Filter Bot}*\n\n`You Can Add any kind of Filters to This Bot!`
 
 _Click Help button for more details_
 """
 
 
 HELP_STRINGS = """
-*Hello My name is* *{}*.
+*Hello My name is* *{Unlimited Filter Bot}*.
 *Main Available Commands are Below:*
 
 All of the following commands  / can  be used...
@@ -52,7 +52,7 @@ def vercheck() -> str:
 
 
 SOURCE_STRING = """
-☹️*Sorry Broh*
+☹️*Sorry Bruh*
 """
 
 
@@ -274,7 +274,7 @@ def get_help(bot: Bot, update: Update):
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="⚙️Help",url="t.me/{}?start=help".format(bot.username))],  
-                                                [InlineKeyboardButton(text="😴Contact Creator",url="https://t.me/D_ar_k_Angel")]]))
+                                                [InlineKeyboardButton(text="😴Contact Creator",url="https://t.me/arminarlert898")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
